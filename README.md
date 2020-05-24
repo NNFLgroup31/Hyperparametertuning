@@ -15,8 +15,26 @@ The framework used for implementation is [Pytorch](https://pytorch.org/) and we 
 
 
 ## Results:
+Some points to note:
 
+1.Mixup was executed for 200 epochs due to longer convergence whereas all other augmentation were executed in 120 epochs.
 
+2.Zero gamma & No bias Decay results were executed only for Resnet-50 Model.
+
+* Learning Rate warmup:
+
+  <img src= "ResultImages/learningratewarmup.JPG" width="600">
+* FP 16:
+* Mixup:
+
+  <img src = "ResultImages/Mixup.JPG" width="600">
+* Zero Gamma:
+
+  <img src = "ResultImages/Zerogamma.JPG" width="600">
+* Nobias:
+
+  <img src = "ResultImages/Nobias.JPG" width="600">
+ 
 
 ## Instructions to Run the code:
 
@@ -33,12 +51,16 @@ The framework used for implementation is [Pytorch](https://pytorch.org/) and we 
    * Resnet-50
   
   Uncomment: 
-#model=torchvision.models.resnet50(pretrained=False)      #model.fc=nn.Linear(2048,10,bias=True)
+  
+  #model=torchvision.models.resnet50(pretrained=False)      
+  #model.fc=nn.Linear(2048,10,bias=True)
   
    * Mobilenet_v2
   
   Uncomment: 
-#model=torchvision.models.mobilenet_v2(pretrained=False) #model._modules['classifier']._modules['1']=nn.Linear(1280,10,bias=True)
+  
+  #model=torchvision.models.mobilenet_v2(pretrained=False)   
+  #model._modules['classifier']._modules['1']=nn.Linear(1280,10,bias=True)
 
 6.Dataset Selection:
   
