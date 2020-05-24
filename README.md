@@ -25,6 +25,8 @@ Some points to note:
 
   <img src= "ResultImages/learningratewarmup.JPG" width="600">
 * FP 16:
+
+  <img src= "ResultImages/FP16.JPG" width="600">
 * Mixup:
 
   <img src = "ResultImages/Mixup.JPG" width="600">
